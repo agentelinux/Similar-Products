@@ -1,0 +1,4 @@
+# Similar-Products module definition.
+app/code/local/Richdynamix/SimilarProducts app/code/local/Richdynamix/SimilarProducts
+app/etc/modules/Richdynamix_SimilarProducts.xml app/etc/modules/Richdynamix_SimilarProducts.xml
+shell/similarity.php shell/similarity.php
