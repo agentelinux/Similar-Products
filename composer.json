@@ -1,0 +1,16 @@
+{
+    "name": "deved-it/similar-products",
+    "type": "magento-module",
+    "license":"OSL-3.0",
+    "description":"Magento Upsell Product Enhancement with PredictionIO",
+    "authors":[
+        {
+            "name":"Steven Richardson",
+            "email":"steven@richdynamix.com"
+        },
+        {
+            "name":"Salvatore Guarino",
+            "email":"sg@deved.it"
+        }
+    ]
+}

@@ -3,15 +3,46 @@ Similar Products for Magento
 
 Magento Upsell Product Enhancement with PredictionIO
 
-## Install
-
-Clone the git repo - `git clone git://github.com/richdynamix/Similar-Products.git` - or https://github.com/richdynamix/Similar-Products/archive/master.zip
-
-Once downloaded copy the contents (app) folders to your project root merging with your existing magento installation.
-
 ### Requirements
 
 Must have an instance of PredictionIO server setup and ready to accept data. Please see the docs for information.
+
+## Installation ##
+
+Similar Products for Magento uses [Composer](http://getcomposer.org) and [Magento Composer Installer](https://github.com/magento-hackathon/magento-composer-installer) to handle installation of the module and its dependencies. To install Similar Products for Magento you will need a copy of _composer.phar_ in your path. If you do not have it availble, run the following commands from your terminal.
+
+    $ curl -sS https://getcomposer.org/installer | php
+    $ chmod a+x composer.phar
+
+If you are already using Magento Composer Installer and have an existing _composer.json_, add _https://github.com/deved-it/Similar-Products_ to the repositories list and _deved-it/similar-products_ as a required dependency for your project. That's it!
+
+If you do not have an existing Magento Composer Installer _composer.json_ file defined, you can use the following template.
+
+    {
+      "repositories": [
+          {
+            "type":"composer",
+            "url":"http://packages.firegento.com"
+          },
+          {
+            "type": "vcs",
+            "url": "https://github.com/deved-it/Similar-Products"
+          }
+      ],
+      "require": {
+          "magento-hackathon/magento-composer-installer": "*",
+          "deved-it/similar-products": "*"
+      },
+      "extra":{
+          "magento-root-dir":"./",
+          "magento-force":"true"
+      }
+    }
+
+
+To install Similar Products for Magento and its dependencies just run composer.phar.
+
+    $ ./composer.phar install
 
 ### Features
 
@@ -49,7 +80,7 @@ Sometimes customers don't login till they get to the checkout so we log the cust
 
 #### Import Existing Sales
 
-Using the shell script included you can import all exiting sales data i.e Customers, Products and the action of conversion to kick start your data feeds. Just run the following command from your web root- 
+Using the shell script included you can import all exiting sales data i.e Customers, Products and the action of conversion to kick start your data feeds. Just run the following command from your web root-
 
 ``php shell/similarity.php --store store1,store2``
 
